@@ -1,3 +1,61 @@
 \chapter{Testfallszenarien}
 
-\blindtext
+\section{Testfälle}
+Folgende Testfälle testen die Musskriterien:
+\renewcommand{\labelenumi}{/T\arabic{enumi}0/}
+\begin{enumerate}
+    \item Workflow anlegen \\ \textbf{Stand:} Geöffnete Workflowübersicht
+    \\ \textbf{Aktion:} Der \Gls{Nutzer} klickt auf den "Neuen Workflow erstellen"-Knopf
+    \\ \textbf{Reaktion:} Der \Gls{Nutzer} wird auf die Workflowerstellungsseite weitergeleitet
+    \item 
+\end{enumerate}
+
+%Was ist Bestandteil der Startseite? Wie navigiert man? Wie erreicht man die einzelne Bereiche
+\section{Testszenarien}
+
+\subsection*{Workflow erstellen und ausführen}
+\begin{itemize}
+    \item Ein \Gls{Nutzer} meldet sich an und bekommt die Startseite angezeigt
+    \item Der \Gls{Nutzer} navigiert zur 
+\end{itemize}
+
+%
+\subsection*{Workflow überprüfen}
+\begin{itemize}
+    \item Ein \Gls{Reviewer} meldet sich an und bekommt die Startseite angezeigt
+    \item Der \Gls{Reviewer} navigiert zur Workflowübersicht und bekommt alle Workflows angezeigt
+    \item Der \Gls{Reviewer} wählt einen der Workflows aus und 
+\end{itemize}
+\subsection*{Workflow exportieren und importieren}
+
+%Nötig? mit vorherigem Verschmelzen?
+\subsection*{Ergebnisse eines Workflows einsehen}
+
+
+%Welche Informationen sind Teil eines Konto? (kompletter Name/Benutzername? E-Mail? 
+%Startet man als Reviewer? Zugangscode?
+\subsection*{Registrierung}
+\begin{itemize}
+    \item Ein neuer Benutzer ruft die Weboberfläche auf und bekommt die Login-Seite angezeigt
+    \item Der neue Benutzer navigiert zur Registrierung
+    \item Der neue Benutzer füllt das Registrierungsformular mit seinen Daten aus und gibt sein Passwort ein
+    \item Der neue Benutzer schickt das Formular ab und gelangt zurück auf die Login-Seite
+    \item Der neue Benutzer meldet sich mit seinem neuem \Gls{Reviewer}konto an
+\end{itemize}
+
+\subsection*{Nutzerverwaltung}
+\begin{itemize}
+    \item Ein \Gls{Admin} meldet sich an und bekommt die Startseite angezeigt
+    \item Der \Gls{Admin} navigiert zur Benutzerverwaltung
+    \item Der \Gls{Admin} bekommt alle Nutzerkonten und ihre Rollen angezeigt
+    \item Der \Gls{Admin} wählt ein Konto aus und ändert seine Rolle von \Gls{Reviewer} zu \Gls{Admin}
+    \item Der \Gls{Admin} wählt ein anderes Konto aus und setzt sein Password zurück
+    \item Der \Gls{Admin} meldet sich ab
+\end{itemize}
+
+%Gelten die Limits pro Nutzer oder global? 
+\subsection*{Hinzufügen von Computation Targets}
+\begin{itemize}
+    \item Ein \Gls{Admin} meldet sich an und ruft die Startseite auf
+    \item Der \Gls{Admin} navigiert zur Serververwaltung
+\end{itemize}
