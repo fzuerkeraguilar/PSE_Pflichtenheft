@@ -4,19 +4,44 @@
 Folgende Testfälle testen die Musskriterien:
 \renewcommand{\labelenumi}{/T\arabic{enumi}0/}
 \begin{enumerate}
-    \item Workflow anlegen \\ \textbf{Stand:} Geöffnete Workflowübersicht
-    \\ \textbf{Aktion:} Der \Gls{Nutzer} klickt auf den "Neuen Workflow erstellen"-Knopf
+    \item Workflow anlegen
+    \\ \textbf{Stand:} Geöffnete Workflowübersicht
+    \\ \textbf{Aktion:} Der \Gls{Nutzer} klickt auf den \enquote{Neuen Workflow erstellen}-Knopf
     \\ \textbf{Reaktion:} Der \Gls{Nutzer} wird auf die Workflowerstellungsseite weitergeleitet
-    \item 
+    \item Workflow exportieren 
+    \\ \textbf{Stand:} Ausgewählter Workflow wird angezeigt
+    \\ \textbf{Aktion:} Der \gls{Nutzer} klickt auf den \enquote{Workflow exportieren}-Knopf
+    \\ \textbf{Reaktion:} Eine .yml oder .json Datei wird heruntergeladen
+    \item Workflow importieren 
+    \\ \textbf{Stand:} Der \gls{Nutzer} ist auf der Workflowerstellungsseite 
+    \\ \textbf{Aktion:} Der \gls{Nutzer} lädt eine gültige .yml oder .json Datei hoch 
+    \\ \textbf{Reaktion:} Der Workflow wird zur Liste der Workflows hinzugefügt
+    \item Anmelden
+    \\ \textbf{Stand:} Login-Seite wird angezeigt
+    \\ \textbf{Aktion:} Der \gls{Nutzer} trägt seine korrekte Daten ein und bestätigt sie
+    \\ \textbf{Reaktion:} Der \gls{Nutzer} wird auf die Startseite gebracht
+    \item Workflow starten
+    \\ \textbf{Stand:} Geöffnete Workflowübersicht 
+    \\ \textbf{Aktion:} \enquote{Starten}-Knopf eines Workflows wird gedrückt
+    \\ \textbf{Reaktion:} Workflow wird gestartet
+    \item Workflow abbrechen
+    \\ \textbf{Stand:} Geöffnete Workflowübersicht
+    \\ \textbf{Aktion:} \enquote{Stop}-Knopf eines Workflows wird gedrückt
+    \\ \textbf{Reaktion:} Ausführung des Workflows wird unterbrochen
+    \item Workflow löschen
+    \\ \textbf{Stand:} Geöffnete Workflowübersicht
+    \\ \textbf{Aktion:} \enquote{Löschen}-Knopf eines Workflows wird gedrückt
+    \\ \textbf{Reaktion:} Workflow wird gelöscht und aus der Liste der Workflows gelöscht
 \end{enumerate}
 
-%Was ist Bestandteil der Startseite? Wie navigiert man? Wie erreicht man die einzelne Bereiche
+
 \section{Testszenarien}
 
 \subsection*{Workflow erstellen und ausführen}
 \begin{itemize}
     \item Ein \Gls{Nutzer} meldet sich an und bekommt die Startseite angezeigt
-    \item Der \Gls{Nutzer} navigiert zur 
+    \item Der \Gls{Nutzer} navigiert zur Workflowübersicht und bekommt alle Workflows angezeigt
+    \item Der \gls{Nutzer} klickt auf den \enquote{Neuen Workflow erstellen}-Knopf und bekommt den 
 \end{itemize}
 
 %
@@ -24,16 +49,30 @@ Folgende Testfälle testen die Musskriterien:
 \begin{itemize}
     \item Ein \Gls{Reviewer} meldet sich an und bekommt die Startseite angezeigt
     \item Der \Gls{Reviewer} navigiert zur Workflowübersicht und bekommt alle Workflows angezeigt
-    \item Der \Gls{Reviewer} wählt einen der Workflows aus und 
+    \item Der \Gls{Reviewer} wählt einen laufenden Workflows aus und bekommt den Status des Workflows und ausgewählte Kennwerte angezeigt
+    \item Der \gls{Reviewer} meldet sich ab
 \end{itemize}
+
 \subsection*{Workflow exportieren und importieren}
+\begin{itemize}
+    \item Ein \gls{Nutzer} meldet sich an und bekommt die Startseite angezeigt
+    \item Der \gls{Nutzer} navigiert zur Workflowübersicht und bekommt alle Workflows angezeigt
+    \item Der \gls{Nutzer} wählt eines der Workflows an und klickt auf den \enquote{Exportieren}-Knopf und eine .yml oder .json-Datei wird heruntergeladen
+    \item Der \gls{Nutzer} 
+\end{itemize}
 
-%Nötig? mit vorherigem Verschmelzen?
+
 \subsection*{Ergebnisse eines Workflows einsehen}
+\begin{itemize}
+    \item Ein \gls{Nutzer} meldet sich und bekommt die Startseite angezeigt
+    \item Der \gls{Nutzer} navigiert zur Workflowübersicht und bekommt alle Workflows angezeigt
+    \item Der \gls{Nutzer} wählt einen laufenden Workflows aus und bekommt eine Übersicht des ausgewählten Workflows angezeigt
+    \item Der \gls{Nutzer} lädt sich die Ergebnisse des Workflows herunter
+    \item Der \gls{Nutzer} meldet sich ab
+\end{itemize}
 
 
-%Welche Informationen sind Teil eines Konto? (kompletter Name/Benutzername? E-Mail? 
-%Startet man als Reviewer? Zugangscode?
+
 \subsection*{Registrierung}
 \begin{itemize}
     \item Ein neuer Benutzer ruft die Weboberfläche auf und bekommt die Login-Seite angezeigt
@@ -53,9 +92,11 @@ Folgende Testfälle testen die Musskriterien:
     \item Der \Gls{Admin} meldet sich ab
 \end{itemize}
 
-%Gelten die Limits pro Nutzer oder global? 
+
 \subsection*{Hinzufügen von Computation Targets}
 \begin{itemize}
     \item Ein \Gls{Admin} meldet sich an und ruft die Startseite auf
     \item Der \Gls{Admin} navigiert zur Serververwaltung
+    \item Der \gls{Admin} erhöht den verfügbaren Hauptspeicher für die Workflows
+    \item Der \gls{Admin} meldet sich ab
 \end{itemize}
