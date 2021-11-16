@@ -1,3 +1,80 @@
 \chapter{Produktdaten}
+Es sollen (mindestens) folgende Daten persistent gespeichert werden.
 
-\blindtext
+\renewcommand{\labelenumi}{/PD\arabic{enumi}0/}
+ \begin{enumerate}
+    \item Benutzerdaten
+    \begin{itemize}
+        \setlength\itemsep{-1em}
+        \item Benutzername
+        \item Passwort (verschlüsselt)
+        \item E-Mail
+        \item Art des Benutzerkonto
+        \begin{itemize}
+            \setlength\itemsep{-1em}
+            \item \gls{Reviewer} (nur Leserechte, kann auf Ergebnisse zugreifen)
+            \item \gls{Nutzer} (erstellen und ausführen von Workflows)
+            \item \gls{Admin} (ändern von Limits, Anbindungen, Datenbank, etc.)
+        \end{itemize}
+    \end{itemize}
+    
+    \item Erstellte Workflows
+    \begin{itemize}
+        \setlength\itemsep{-1em}
+        \item Name des Workflows
+        \item Ersteller des Workflows
+        \item Workflowschritte
+        \item Ablaufverhalten der Workflowschritte
+        \item Python(-glue-)code
+        \item Festgelegte Parameter für Nutzer
+    \end{itemize}
+    
+    \item Laufenden Workflows
+    \begin{itemize}
+        \setlength\itemsep{-1em}
+        \item genutzte Parameter zur Ausführung des Workflows und einzelner Workflowschritte
+        \item Metadaten
+        \begin{itemize}
+            \setlength\itemsep{-1em}
+            \item Laufzeit
+            \item genutzte Resourcen
+        \end{itemize}
+        \item Status der einzelnen Workflowschritte
+        \begin{itemize}
+            \setlength\itemsep{-1em}
+            \item noch nicht gestartet
+            \item laufend
+            \item abgeschlossen
+            \item abgebrochen
+        \end{itemize}
+        \item Logfiles
+        \item Beobachtete Parameter
+    \end{itemize}
+    
+    \item Abgeschlossenen Workflows
+    \begin{itemize}
+        \setlength\itemsep{-1em}
+        \item Logfiles
+        \item Metadaten
+        \begin{itemize}
+            \setlength\itemsep{-1em}
+            \item Laufzeit
+            \item genutzte Resourcen
+        \end{itemize}
+        \item Resultat des Workflows
+    \end{itemize}
+    
+    \item Serverkonfiguration
+    \begin{itemize}
+        \setlength\itemsep{-1em}
+        \item Verwendete Datenbank
+    \end{itemize}
+    
+    \item Resourcenlimits
+    \begin{itemize}
+        \setlength\itemsep{-1em}
+        \item Hauptspeicherlimit
+        \item Festplattenlimit
+        \item Laufzeitlimit
+    \end{itemize}
+ \end{enumerate}
