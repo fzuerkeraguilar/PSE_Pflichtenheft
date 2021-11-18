@@ -2,6 +2,8 @@
 
 \paragraph{/M10/ \textit{Workflows verwalten} wird umgesetzt durch:}
 
+\newcounter{FAs}
+
 \renewcommand{\labelenumi}{/FA\arabic{enumi}0/}
 \begin{enumerate}
     \setlength\itemsep{-1em}
@@ -9,37 +11,56 @@
     \item Workflow exportieren
     \item Workflow löschen
     \item Workflow bearbeiten
+    \setcounter{FAs}{\value{enumi}}
+\end{enumerate}
+
 
 \paragraph{/M20/ \textit{Workflows entwerfen} wird umgesetzt durch:}
 
+
+\renewcommand{\labelenumi}{/FA\arabic{enumi}0/}
+\begin{enumerate}
+    \setcounter{enumi}{\value{FAs}}
     \setlength\itemsep{-1em}
     \item Erstellung als Graph in graphischem Editor
     \item Hinzufügen neuer Workflowschritte
     \item Auswählen von Workflowschritten
     \item Konfiguration der Schritte durch Dialog
     \item Hochladen von Python(-glue-)code und Festlegung der Parameter für Nutzer %was ist das?
-    
+    \setcounter{FAs}{\value{enumi}}
+\end{enumerate}
+
 \paragraph{/M30/ \textit{Workflows ausführen} wird umgesetzt durch:}
 
+\begin{enumerate}
     \setlength\itemsep{-1em}
+    \setcounter{enumi}{\value{FAs}}
     \item Workflow aus Liste auswählen
     \item Parameter für Durchführung angeben
     \item Ausführung starten
     \item Ausführung abbrechen
     \item Details der Ausführung anzeigen
     \item Auswählen von Details zum Download
+    \setcounter{FAs}{\value{enumi}}
+\end{enumerate}
     
 \paragraph{/M50/ \textit{Qualitätskontrolle} wird umgesetzt durch:}
 
+\begin{enumerate}
     \setlength\itemsep{-1em}
+    \setcounter{enumi}{\value{FAs}}
     \item Systemressourcen überwachen %nichtfunktional oder funktional?
     \item Datenbankstatus überwachen
     \item Benachrichtigung bei Fehlschlägen
     \item \textit{(optional) Datenqualität überwachen}
+    \setcounter{FAs}{\value{enumi}}
+\end{enumerate}
     
 \paragraph{/M60/ \textit{Nutzer verwalten} wird umgesetzt durch:}
 
+\begin{enumerate}
     \setlength\itemsep{-1em}
+    \setcounter{enumi}{\value{FAs}}
     \item Login über Webseite
     \item Nutzer registrieren
     \item Unterscheidung von Nutzern in Reviewer, Nutzer und Administratoren
@@ -48,10 +69,14 @@
     \item Löschung aller Nutzerdaten durch Administratoren
     \item Löschen von Nutzern
     \item Sperren von Nutzern %braucht man das?
+    \setcounter{FAs}{\value{enumi}}
+\end{enumerate}
     
 \paragraph{/M70/ \textit{Konfiguration ändern} wird umgesetzt durch:}
 
+\begin{enumerate}
     \setlength\itemsep{-1em}
+    \setcounter{enumi}{\value{FAs}}
     \item Einstellen von Datenspeicherung
     \item Einstellung von Limits %was für Limits?
     \item Hinzufügen von Computation Targets %was ist das?
