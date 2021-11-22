@@ -19,7 +19,7 @@ Folgende Funktionen müssen erfüllt werden:
     %\item Details der Ausführung herunterladbar
     %\item Zustand laufender Workflows einsehen
     \item Nutzer verwalten
-    \item Konfiguration ändern
+    \item Anwendungskonfiguration ändern
     %\item Nutzerrechte verwalten
     %\item Nutzerdaten löschen
 \end{enumerate}
@@ -29,11 +29,15 @@ Folgende Funktionen wären wünschenswert:
 \renewcommand{\labelenumi}{/W\arabic{enumi}0/}
 \begin{enumerate}
     \setlength\itemsep{-1em}
-    \item Schutz vor SQL Injektionen
+    \item Schutz vor \gls{SQL} \glspl{Injektion}
     \item Sauberes Beenden der Anwendung
     \item Validierung der Custom-Schritte vor der Ausführung
     \item Überwachung der Datenqualität
-    \item Ändern von plotskripten ohne die Simulation erneut ausführen zu müssen
+    \item Ändern von \glspl{Plotskript}n ohne die Simulation erneut ausführen zu müssen
+    \item Graphische Erstellung von Workflows
+    \item Graphisches Bearbeiten von Workflows
+    \item Schnittstelle zu \gls{ABAQUS}
+    \item Darstellung und Bearbeitung der Config-Dateien über \gls{Key-Value-Pair}-Liste
 \end{enumerate}
 
 \section{Abgrenzungskriterien}
@@ -41,6 +45,8 @@ Folgende Funktionen sind kein Ziel des Projektes:
 \renewcommand{\labelenumi}{/A\arabic{enumi}0/}
 \begin{enumerate}
     \setlength\itemsep{-1em}
-    \item Einsatz nicht auf Handhelds, Palms oder anderen mobilen Rechner eingeplant 
+    \item Einsatz auf mobilen Endgeräten
+    \item Vollständiges Erstellen von Config-Dateien
+    \item Zugriff von Personen außerhalb des Universitätsnetzwerk
 \end{enumerate}
 \renewcommand{\labelenumi}{\arabic{enumi}}

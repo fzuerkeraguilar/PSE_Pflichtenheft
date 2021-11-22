@@ -6,11 +6,14 @@
 
 \renewcommand{\labelenumi}{/FA\arabic{enumi}0/}
 \begin{enumerate}
-    \setlength\itemsep{-1em}
+    \setlength\itemsep{-1em}    
+    \item Darstellung aller Workflows
     \item Workflow importieren
     \item Workflow exportieren
     \item Workflow löschen
-    \item Workflow bearbeiten
+    \item Information von bereits abgeschlossenen Workflows einsehen
+    \item Herunterladen ausgewählter Informationen von abgeschlossenen Workflows
+    \item Workflow Umbenennen
     \setcounter{FAs}{\value{enumi}}
 \end{enumerate}
 
@@ -19,28 +22,43 @@
 
 
 \renewcommand{\labelenumi}{/FA\arabic{enumi}0/}
+\renewcommand{\labelenumii}{/FA\arabic{enumi}\arabic{enumii}/}
 \begin{enumerate}
     \setcounter{enumi}{\value{FAs}}
     \setlength\itemsep{-1em}
-    \item Erstellung als Graph in graphischem Editor
-    \item Hinzufügen neuer Workflowschritte
-    \item Auswählen von Workflowschritten
-    \item Konfiguration der Schritte durch Dialog
-    \item Hochladen von Python(-glue-)code und Festlegung der Parameter für Nutzer %was ist das?
+    \item Programmierbasierte Erstellung von Workflows
+    \vspace{-5mm}
+    \begin{enumerate}
+        \setlength\itemsep{-1em}
+        \item Erstellung von Standard Machine Learning Workflows %Ist das so gut?
+        \item Erstellung von Theory-guided Feature Workflows %Ist das so gut?
+        \item Erstellung von Theory-guided Intermediate Value Workflows %Ist das so gut?
+        \item Erstellung von Theory-guided Hybrid Model Workflows %Ist das so gut?
+    \end{enumerate}
+    \renewcommand{\labelenumi}{/FA\arabic{enumi}0/}
+    \item Hinzufügen von Workflowschritten
+    \item Entfernen von Workflowschritten
+    %\item Auswählen von Workflowschritten
+    %\item Konfiguration der Schritte durch Dialog (Ist das hier das gleiche wie Konfiguration der Config-Dateien?)
+    \item Konfiguration der Config-Dateien
+    \item Hochladen von \gls{Python}(-glue-)code% und Festlegung der Parameter für Nutzer 
+    %\item Festlegung der Parameter für Nutzer
     \setcounter{FAs}{\value{enumi}}
 \end{enumerate}
 
-\paragraph{/M30/ \textit{Workflows ausführen} wird umgesetzt durch:}
+%Vielleicht: Workflow Ausführung
+\paragraph{/M30/ \textit{Workflow Ausführen} wird umgesetzt durch:}
 
 \begin{enumerate}
     \setlength\itemsep{-1em}
     \setcounter{enumi}{\value{FAs}}
-    \item Workflow aus Liste auswählen
+    %\item Workflow aus Liste auswählen
     \item Parameter für Durchführung angeben
     \item Ausführung starten
     \item Ausführung abbrechen
-    \item Details der Ausführung anzeigen
-    \item Auswählen von Details zum Download
+    \item Speichern von Metadaten eines Workflows
+    \item Informationen von laufenden Workflows einsehen
+    \item Herunterladen ausgewählter Informationen von laufenden Workflows
     \setcounter{FAs}{\value{enumi}}
 \end{enumerate}
     
@@ -52,7 +70,6 @@
     \item Systemressourcen überwachen %nichtfunktional oder funktional?
     \item Datenbankstatus überwachen
     \item Benachrichtigung bei Fehlschlägen
-    \item \textit{(optional) Datenqualität überwachen}
     \setcounter{FAs}{\value{enumi}}
 \end{enumerate}
     
@@ -72,14 +89,13 @@
     \setcounter{FAs}{\value{enumi}}
 \end{enumerate}
     
-\paragraph{/M70/ \textit{Konfiguration ändern} wird umgesetzt durch:}
+\paragraph{/M70/ \textit{Anwendungskonfiguration ändern} wird umgesetzt durch:}
 
 \begin{enumerate}
     \setlength\itemsep{-1em}
     \setcounter{enumi}{\value{FAs}}
-    \item Einstellen von Datenspeicherung
+    \item Konfiguration der Datenbank
     \item Einstellung von Limits %was für Limits?
-    \item Hinzufügen von Computation Targets %was ist das?
     \item Erkennen verfügbarer Ressourcen
     \item Festlegen verfügbarer Ressourcen
 \end{enumerate}

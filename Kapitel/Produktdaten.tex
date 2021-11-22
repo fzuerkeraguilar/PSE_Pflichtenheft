@@ -6,9 +6,8 @@ Es sollen (mindestens) folgende Daten persistent gespeichert werden.
     \item Benutzerdaten
     \begin{itemize}
         \setlength\itemsep{-1em}
-        \item Benutzername
-        \item Passwort (verschlüsselt)
         \item E-Mail
+        \item Passwort
         \item Art des Benutzerkonto
         \begin{itemize}
             \setlength\itemsep{-1em}
@@ -26,13 +25,14 @@ Es sollen (mindestens) folgende Daten persistent gespeichert werden.
         \item Workflowschritte
         \item Ablaufverhalten der Workflowschritte
         \item Python(-glue-)code
-        \item Festgelegte Parameter für Nutzer
+        \item Config-Dateien
     \end{itemize}
     
     \item Laufenden Workflows
     \begin{itemize}
         \setlength\itemsep{-1em}
-        \item genutzte Parameter zur Ausführung des Workflows und einzelner Workflowschritte
+        \item Config-Dateien
+        %\item genutzte Parameter zur Ausführung des Workflows und einzelner Workflowschritte
         \item Metadaten
         \begin{itemize}
             \setlength\itemsep{-1em}
@@ -48,7 +48,7 @@ Es sollen (mindestens) folgende Daten persistent gespeichert werden.
             \item abgebrochen
         \end{itemize}
         \item Logfiles
-        \item Beobachtete Parameter
+        \item Definierte Ausgabewerte
     \end{itemize}
     
     \item Abgeschlossenen Workflows

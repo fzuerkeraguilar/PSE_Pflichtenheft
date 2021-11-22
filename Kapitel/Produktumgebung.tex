@@ -1,29 +1,38 @@
 \chapter{Produktumgebung}
-Das Produkt ist im Server - Client Prinzip konzipiert.
+Das Produkt ist im \gls{Client-Server} Prinzip konzipiert.
 
 \section{Software}
 \textbf{Server}
 \begin{itemize}
-    \item Läuft auf Virtual Machine Server
+    \item Läuft auf \gls{Virtual Machine} Server
     \item Ausführbar auf Linux
 %Linux Version
 %Andere Versionen für den Server
 \end{itemize}
-\textbf{Client} Die Webanwendung ist von allen Betriebssystemen aus erreichbar. Die Anwendung ist mit Chrome und Firefox benutzbar. Nur eine Internetverbindung ist erforrderlich um die Anwendung auszuführen.
-%Welche Versionen für Chrome und Firefox werden konkret unterstützt
+\textbf{Client} Die Webanwendung ist von allen Betriebssystemen aus erreichbar. Die Anwendung ist mit Chrome und Firefox benutzbar. Nur eine Verbindung zum Universitätsnetzwerk ist erforderlich um die Anwendung auszuführen. \\[0.1in] Konkret unterstützen wir:
+\begin{itemize}
+    \setlength\itemsep{-1em}
+    \item Chrome ab Version 96
+    \item Firefox ab Version 94 %.0.1
+\end{itemize}
 \section{Hardware}
 \textbf{Server}
-Der Server stellt 8 GB RAM und 8 Kerne zur Verfügung
+\begin{itemize}
+    \item 8 Kern CPU
+    \item 16 GB Arbeitsspeicher
+    \item 2 TB Hauptspeicher
+\end{itemize}
+
 %Welche Hardwarespezifikationen soll der Server haben? CPU (Kerne, Takt), Arbeitsspeicher und Hauptspeicher?
 \textbf{Client}
-Außer einer Internetverbindung wird keine Hardware zur Verwendung der Anwendung benötigt.
-\newpage
+Außer einer Verbindung zum Universitätsnetzwerk wird keine Hardware zur Verwendung der Anwendung benötigt. 
+
 \section{Schnittstellen}
 \renewcommand{\labelenumi}{/S\arabic{enumi}0/}
 Das Produkt besitzt eine Schnittstelle zu
 \begin{enumerate}
     \setlength\itemsep{-1em}
-    \item TGDS
-    \item M++
-    \item SQL: MySQL
+    \item \gls{M++}
+    \item \gls{SQL}: MySQL
+    \item Airflow Scheduler
 \end{enumerate}
