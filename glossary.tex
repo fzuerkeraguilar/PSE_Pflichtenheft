@@ -1,8 +1,13 @@
 \makeglossaries
 \newglossaryentry{Reviewer}{
 name = Reviewer,
-description ={Benutzerkonto, das nur Leserechte hat und auf Ergebnisse zugreifen kann, aber keine Workflows erstellen oder ändern kann},
+description ={Benutzerkonto, das nur Leserechte hat und auf Ergebnisse zugreifen kann  aber keine Workflows erstellen oder ändern kann},
 plural = Reviewer
+}
+
+\newglossaryentry{Apache Airflow}{
+name = Apache Airflow,
+description ={open-source Workflow Management Plattform für Workflows}
 }
 
 \newglossaryentry{Nutzer}{
@@ -12,9 +17,9 @@ plural = Developer
 }
 
 \newglossaryentry{Workflow}{
-name = Workflow,
-description = {Gerichteter kreisfreifer Graph von Aufgaben},
-plural = Workflows
+name = Workflow-Instanz,
+description = {Gerichteter Graph von Aufgaben mit Parametern},
+plural = Workflow-Instanzen
 }
 
 \newglossaryentry{Admin}{
@@ -25,13 +30,13 @@ plural = Administratoren
 
 \newglossaryentry{Client-Server}{
 name = Client-Server,
-description = {Ein Modell, bei dem die Anwendungslogik auf einem entfernten System (Server) ausgeführt wird, während das Benutzersystem (Client) die zu verarbeiteteten Informationen an den Server schickt, und die Ergebnisse zurückbekommt},
+description = {Eine Software Architektur, bei der Anwender (Clients) Dienste von einem Server anfordern können. Der Server bedient dabei mehrere Clients},
 plural = Client-Server
 }
 
 \newglossaryentry{Machine Learning}{
 name = Machine Learning,
-description = {Anwendung der künstlichen Intelligenz, die aus Daten selbstständig versucht zu Muster und Zusammenhänge lernen und sich darauf basierend selbstständig verbessern kann},
+description = {Anwendung der künstlichen Intelligenz, die aus Daten selbstständig versucht, Muster und Zusammenhänge zu lernen und sich darauf basierend, selbstständig zu verbessern},
 plural = Machine Learnings
 }
 
@@ -65,12 +70,12 @@ description = {Universelle, höhere Programmiersprache},
 
 \newglossaryentry{Virtual Machine}{
 name = Virtual Machine,
-description = {Kapselung eines Rechnersystems innerhalb eines reell existierenden Rechners, das die Architektur eines anderen Rechners Nachbildet},
+description = {Kapselung eines Rechnersystems innerhalb eines reell existierenden Rechners, das die Architektur eines anderen Rechners nachbildet},
 }
 
 \newglossaryentry{TGDS}{
 name = TGDS,
-description = {Theorie Guided Data Science: Erweitert Anwendungen künstlicher intelligenz um theoretische Modelle}
+description = {Theorie Guided Data Science: Erweitert Anwendungen künstlicher Intelligenz um theoretische Modelle}
 }
 
 \newglossaryentry{M++}{
@@ -91,5 +96,28 @@ description = {Graphische Benutzeroberfläche}
 
  \newglossaryentry{ABAQUS}{
  name = ABAQUS,
- description = {Ein kommerzielles Programmpaket, mit dem sich Probleme der Festkörper-Statik und -Dynamik, der Wärmeleitung, des Elektromagnetismus und der Fluiddynamik bearbeiten lassen.},
+ description = {Ein kommerzielles Programmpaket, mit dem sich Probleme der Festkörper-Statik und -Dynamik, der Wärmeleitung, des Elektromagnetismus und der Fluiddynamik bearbeiten lassen},
  }
+ 
+ \newglossaryentry{benutzerdefinierte Schritte}{
+ name = benutzerdefinierte Schritte,
+ description = {Vom Nutzer erstelle Schritte},
+ plural = benutzerdefinierten Schritte
+ }
+ 
+ \newglossaryentry{Limits}{
+ name = Resourcenlimits,
+ description = {Limitierungen auf die Ressourcen, die ein Workflow nutzen darf, wie Laufzeit und Festplattenspeicher},
+ }
+ 
+ \newglossaryentry{Ressourcen}{
+ name = Ressourcen,
+ description = {Ressourcen des Systems, beinhaltet unter anderem die CPU-Anzahl, die Speichergröße},
+ }
+ 
+ \newglossaryentry{Workflow Schablone}{
+ name = Workflow,
+ description = {Unparametrisierte Workflowschritte. Bei Parameterbelegung wird eine neue Workflow Instanz erstellt},
+ plural = Workflows
+ }
+ 

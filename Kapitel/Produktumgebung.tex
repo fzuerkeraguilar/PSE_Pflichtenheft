@@ -1,38 +1,45 @@
 \chapter{Produktumgebung}
-Das Produkt ist im \gls{Client-Server} Prinzip konzipiert.
+Das Produkt ist als Webanwendung nach \gls{Client-Server} Modell konzipiert.
 
 \section{Software}
-\textbf{Server}
-\begin{itemize}
-    \item Läuft auf \gls{Virtual Machine} Server
-    \item Ausführbar auf Linux
+\textbf{Server:}
+Aufgeteilt in Ausführungsserver und Datenbank. Für beide gilt:
+\begin{itemize} %Hier sollte noch mehr
+    \setlength\itemsep{-1em}
+    \item Ausführbar als Docker-Container
+    \item Ausführbar über Nomad von HashiCorp
 %Linux Version
 %Andere Versionen für den Server
 \end{itemize}
-\textbf{Client} Die Webanwendung ist von allen Betriebssystemen aus erreichbar. Die Anwendung ist mit Chrome und Firefox benutzbar. Nur eine Verbindung zum Universitätsnetzwerk ist erforderlich um die Anwendung auszuführen. \\[0.1in] Konkret unterstützen wir:
+\textbf{Client:} Die Webanwendung ist von Linux und Windows aus erreichbar. 
+Um die Anwendung auszuführen, ist eine Verbindung zum Universitätsnetzwerk erforderlich.
+Die Webanwendung ist für folgende Internetbrowser optimiert:
 \begin{itemize}
     \setlength\itemsep{-1em}
-    \item Chrome ab Version 96
-    \item Firefox ab Version 94 %.0.1
+    \item Google Chrome (ab Version 96)
+    \item Mozilla Firefox (ab Version 94) %.0.1
 \end{itemize}
+
 \section{Hardware}
 \textbf{Server}
 \begin{itemize}
+    \setlength\itemsep{-1em}
     \item 8 Kern CPU
-    \item 16 GB Arbeitsspeicher
-    \item 2 TB Hauptspeicher
+    \item 8 GB Arbeitsspeicher
+    \item 1 TB Hauptspeicher
 \end{itemize}
 
 %Welche Hardwarespezifikationen soll der Server haben? CPU (Kerne, Takt), Arbeitsspeicher und Hauptspeicher?
-\textbf{Client}
-Außer einer Verbindung zum Universitätsnetzwerk wird keine Hardware zur Verwendung der Anwendung benötigt. 
+\textbf{Client:}
+Außer einer Verbindung zum Universitätsnetzwerk stellt das Produkt keine besonderen Hardware-Anforderungen an den Client.
 
 \section{Schnittstellen}
 \renewcommand{\labelenumi}{/S\arabic{enumi}0/}
-Das Produkt besitzt eine Schnittstelle zu
+Das Produkt besitzt Schnittstellen zu folgenden Anwendungen
 \begin{enumerate}
     \setlength\itemsep{-1em}
     \item \gls{M++}
+    \item \gls{ABAQUS}
     \item \gls{SQL}: MySQL
-    \item Airflow Scheduler
+    \item \gls{Apache Airflow}
 \end{enumerate}

@@ -17,32 +17,43 @@ Es sollen (mindestens) folgende Daten persistent gespeichert werden.
         \end{itemize}
     \end{itemize}
     
-    \item Erstellte Workflows
-    \begin{itemize}
+    \item Erstellte \glspl{Workflow Schablone}
+        \begin{itemize}
         \setlength\itemsep{-1em}
-        \item Name des \glspl{Workflow}
-        \item Ersteller des Workflows
-        \item Workflowschritte
-        \item Ablaufverhalten der Workflowschritte
-        \item Python(-glue-)code
-        \item Config-Dateien
+        \item Name des \glspl{Workflow Schablone}
+        \item Ersteller des \glspl{Workflow Schablone}
+        \item Pythoncode
+        \item \gls{Workflow}-Schritte
+        \item Ablaufverhalten der \gls{Workflow}-Schritte
     \end{itemize}
     
-    \item Laufenden Workflows
+    \item Erstellte \glspl{Workflow}
     \begin{itemize}
         \setlength\itemsep{-1em}
-        \item Config-Dateien
+        \item Name der \glspl{Workflow}
+        \item Ersteller der \glspl{Workflow}
+        \item Konfigurations-Dateien
+    \end{itemize}
+    
+    \item Laufende \glspl{Workflow}
+    \begin{itemize}
+        \setlength\itemsep{-1em}
+        \item Konfigurations-Dateien
         %\item genutzte Parameter zur Ausführung des Workflows und einzelner Workflowschritte
         \item Metadaten
         \begin{itemize}
             \setlength\itemsep{-1em}
+            \item Ersteller der \gls{Workflow}
+            \item Nutzer der die Ausführung der \gls{Workflow} gestartet hat
             \item Laufzeit
-            \item genutzte Resourcen
+            \item Startzeit
+            \item genutzte Ressourcen
+            \item Versionen der genutzten Softwarekomponenten
         \end{itemize}
         \item Status der einzelnen Workflowschritte
         \begin{itemize}
             \setlength\itemsep{-1em}
-            \item noch nicht gestartet
+            \item ausführungsbereit
             \item laufend
             \item abgeschlossen
             \item abgebrochen
@@ -51,15 +62,20 @@ Es sollen (mindestens) folgende Daten persistent gespeichert werden.
         \item Definierte Ausgabewerte
     \end{itemize}
     
-    \item Abgeschlossenen Workflows
+    \item Abgeschlossenen \glspl{Workflow}
     \begin{itemize}
         \setlength\itemsep{-1em}
         \item Logfiles
         \item Metadaten
         \begin{itemize}
             \setlength\itemsep{-1em}
+            \item Ersteller der \gls{Workflow}
+            \item Nutzer der die Ausführung der \gls{Workflow} gestartet hat
             \item Laufzeit
-            \item genutzte Resourcen
+            \item Startzeit
+            \item Beendigungszeit
+            \item genutzte Ressourcen
+            \item Versionen der genutzten Softwarekomponenten
         \end{itemize}
         \item Resultat des Workflows
     \end{itemize}
@@ -68,6 +84,7 @@ Es sollen (mindestens) folgende Daten persistent gespeichert werden.
     \begin{itemize}
         \setlength\itemsep{-1em}
         \item Verwendete Datenbank
+        \item Verwendete Worker
     \end{itemize}
     
     \item Resourcenlimits

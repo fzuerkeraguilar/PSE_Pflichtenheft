@@ -1,24 +1,46 @@
 \chapter{Produktfunktionen}
 
-\paragraph{/M10/ \textit{Workflows verwalten} wird umgesetzt durch:}
+\paragraph{/M10/ \textit{\glspl{Workflow} verwalten} wird umgesetzt durch:}
 
 \newcounter{FAs}
 
 \renewcommand{\labelenumi}{/FA\arabic{enumi}0/}
 \begin{enumerate}
     \setlength\itemsep{-1em}    
-    \item Darstellung aller Workflows
-    \item Workflow importieren
-    \item Workflow exportieren
-    \item Workflow löschen
-    \item Information von bereits abgeschlossenen Workflows einsehen
-    \item Herunterladen ausgewählter Informationen von abgeschlossenen Workflows
-    \item Workflow Umbenennen
+    % Muss wo anders \item Darstellung laufender \glspl{Workflow}
+    \item Darstellung abgeschlossener \glspl{Workflow}
+    \item Information von bereits abgeschlossenen \glspl{Workflow} einsehen
+    \item Herunterladen ausgewählter Informationen von abgeschlossenen \glspl{Workflow}
+    \item Darstellung abgeschlossener \glspl{Workflow}
+    \item \gls{Workflow} importieren
+    \item \gls{Workflow} exportieren
     \setcounter{FAs}{\value{enumi}}
 \end{enumerate}
 
+\paragraph{/M20/ \textit{\glspl{Workflow Schablone} verwalten} wird umgesetzt durch:}
+\begin{enumerate}
+    \setlength\itemsep{-1em}
+    \setcounter{enumi}{\value{FAs}}
+    \item Darstellung aller \glspl{Workflow Schablone}
+    \item Darstellung der \gls{Workflow Schablone} Schritte
+    \item \gls{Workflow Schablone} löschen
+    \item \gls{Workflow Schablone} umbenennen
+        \item \gls{Workflow Schablone} importieren
+    \item \gls{Workflow Schablone} exportieren
+    \setcounter{FAs}{\value{enumi}}
+\end{enumerate}
 
-\paragraph{/M20/ \textit{Workflows entwerfen} wird umgesetzt durch:}
+\paragraph{/M30/ \textit{Parametrierung von \glspl{Workflow Schablone}} wird umgesetzt durch:}
+\begin{enumerate}
+    \setlength\itemsep{-1em}
+    \setcounter{enumi}{\value{FAs}}
+    \item Hochladen von Config-Dateien
+    \item Bearbeiten von Config-Dateien als Rohtext
+    %\item Bearbeiten von Config-Dateine als \gls{Key-Value-Pair}-Liste
+    \setcounter{FAs}{\value{enumi}}
+\end{enumerate}
+
+\paragraph{/M40/ \textit{\glspl{Workflow Schablone} entwerfen} wird umgesetzt durch:}
 
 
 \renewcommand{\labelenumi}{/FA\arabic{enumi}0/}
@@ -26,76 +48,98 @@
 \begin{enumerate}
     \setcounter{enumi}{\value{FAs}}
     \setlength\itemsep{-1em}
-    \item Programmierbasierte Erstellung von Workflows
+    \item Programmbasierte Erstellung von \glspl{Workflow Schablone}
     \vspace{-5mm}
     \begin{enumerate}
         \setlength\itemsep{-1em}
-        \item Erstellung von Standard Machine Learning Workflows %Ist das so gut?
-        \item Erstellung von Theory-guided Feature Workflows %Ist das so gut?
-        \item Erstellung von Theory-guided Intermediate Value Workflows %Ist das so gut?
-        \item Erstellung von Theory-guided Hybrid Model Workflows %Ist das so gut?
+        \item Erstellung von Standard Machine Learning \glspl{Workflow Schablone} %Ist das so gut?
+        \item Erstellung von Theory-guided Feature \glspl{Workflow Schablone} %Ist das so gut?
+        \item Erstellung von Theory-guided Intermediate Value \glspl{Workflow Schablone} %Ist das so gut?
+        \item Erstellung von Theory-guided Hybrid Model \glspl{Workflow Schablone} %Ist das so gut?
     \end{enumerate}
     \renewcommand{\labelenumi}{/FA\arabic{enumi}0/}
-    \item Hinzufügen von Workflowschritten
-    \item Entfernen von Workflowschritten
+    \item Hinzufügen von \glspl{Workflow Schablone}-schritten
+    \item Entfernen von \glspl{Workflow Schablone}-schritten
     %\item Auswählen von Workflowschritten
     %\item Konfiguration der Schritte durch Dialog (Ist das hier das gleiche wie Konfiguration der Config-Dateien?)
-    \item Konfiguration der Config-Dateien
-    \item Hochladen von \gls{Python}(-glue-)code% und Festlegung der Parameter für Nutzer 
+    \item Hochladen von \gls{Python}code% und Festlegung der Parameter für Nutzer 
     %\item Festlegung der Parameter für Nutzer
     \setcounter{FAs}{\value{enumi}}
 \end{enumerate}
 
 %Vielleicht: Workflow Ausführung
-\paragraph{/M30/ \textit{Workflow Ausführen} wird umgesetzt durch:}
+\paragraph{/M50/ \textit{\glspl{Workflow} Ausführen} wird umgesetzt durch:}
 
 \begin{enumerate}
     \setlength\itemsep{-1em}
     \setcounter{enumi}{\value{FAs}}
     %\item Workflow aus Liste auswählen
-    \item Parameter für Durchführung angeben
+    %\item Parameter für Durchführung angeben
     \item Ausführung starten
     \item Ausführung abbrechen
-    \item Speichern von Metadaten eines Workflows
+    \item Speichern von Metadaten eines \glspl{Workflow}
     \item Informationen von laufenden Workflows einsehen
     \item Herunterladen ausgewählter Informationen von laufenden Workflows
+    %\item Bearbeiten von Config-Dateien
     \setcounter{FAs}{\value{enumi}}
 \end{enumerate}
-    
-\paragraph{/M50/ \textit{Qualitätskontrolle} wird umgesetzt durch:}
+
+\paragraph{/M60/ \textit{\gls{Workflow}-Ergebnisse anzeigen} wird umgesetzt durch:}
+\begin{enumerate}
+    \setlength\itemsep{-1em}
+    \setcounter{enumi}{\value{FAs}}
+    \item Anzeigen der Ergebnisse der \gls{Workflow} als Rohtext
+    \item Anzeigen der Metadaten der \gls{Workflow}
+    \item Anzeigen des Logs der \gls{Workflow}
+    \item eigene Visualisierungsscripte, die vor der Ausführung festgelegt werden
+    \setcounter{FAs}{\value{enumi}}
+\end{enumerate}
+
+\paragraph{/M70/ \textit{Workflow-Instanz Ergebnisse exportieren} wird umgesetzt durch:}
+\begin{enumerate}
+    \setlength\itemsep{-1em}
+    \setcounter{enumi}{\value{FAs}}
+    \item Auswahl von Bestandteilen aller erzeugten Ergebnisse
+    \item Auswahl von erzeugten Metadaten
+    \item Herunterladen als Archivdatei
+    \setcounter{FAs}{\value{enumi}}
+\end{enumerate}
+
+
+\paragraph{/M80/ \textit{Qualitätskontrolle} wird umgesetzt durch:}
 
 \begin{enumerate}
     \setlength\itemsep{-1em}
     \setcounter{enumi}{\value{FAs}}
-    \item Systemressourcen überwachen %nichtfunktional oder funktional?
+    \item Systemressourcen überwachen
     \item Datenbankstatus überwachen
-    \item Benachrichtigung bei Fehlschlägen
+    \item Benachrichtigung bei Fehlschlägen über eine Nachricht über E-Mail
     \setcounter{FAs}{\value{enumi}}
 \end{enumerate}
     
-\paragraph{/M60/ \textit{Nutzer verwalten} wird umgesetzt durch:}
+\paragraph{/M90/ \textit{Nutzer verwalten} wird umgesetzt durch:}
 
 \begin{enumerate}
     \setlength\itemsep{-1em}
     \setcounter{enumi}{\value{FAs}}
     \item Login über Webseite
-    \item Nutzer registrieren
+    \item neue Benutzer registrieren
     \item Unterscheidung von Nutzern in \gls{Reviewer}, \gls{Nutzer} und \gls{Admin}
     \item Passwort zurücksetzen
     \item Änderung der Nutzerrechte durch \glspl{Admin}
-    \item Löschung aller Nutzerdaten durch \glspl{Admin}
+    %\item Löschung aller Nutzerdaten durch \glspl{Admin}
     \item Löschen von Nutzern
     \item Sperren von Nutzern %braucht man das?
     \setcounter{FAs}{\value{enumi}}
 \end{enumerate}
     
-\paragraph{/M70/ \textit{Anwendungskonfiguration ändern} wird umgesetzt durch:}
+\paragraph{/M100/ \textit{Anwendungskonfiguration ändern} wird umgesetzt durch:}
 
 \begin{enumerate}
     \setlength\itemsep{-1em}
     \setcounter{enumi}{\value{FAs}}
     \item Konfiguration der Datenbank
-    \item Einstellung von Limits %was für Limits?
-    \item Erkennen verfügbarer Ressourcen
+    \item Einstellung von \gls{Limits} %was für Limits?
+    \item Erkennen verfügbarer \gls{Ressourcen}
     \item Festlegen verfügbarer Ressourcen
 \end{enumerate}

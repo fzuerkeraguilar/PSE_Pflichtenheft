@@ -1,20 +1,22 @@
 \chapter{Zielbestimmung}
-Durch das Produkt sollen Materialwissenschaftler in die Lage versetzt werden, den Prozess des Kompilierens und Ausführens von Simulationen effizienter durchzuführen. 
-Zusätzlich sollen die Ergebnisse der Simulationen über das Produkt einsehbar sein. \newline
+Durch das Produkt sollen Materialwissenschaftler in die Lage versetzt werden, den Prozess des Ausführens von Materialsimulationen übersichtlicher zu gestalten, besser zu dokumentieren und die Ergebnisse dieser Materialsimulationen einzusehen.
+\newline
 \section{Musskriterien}
 Folgende Funktionen müssen erfüllt werden:
 \renewcommand{\labelenumi}{/M\arabic{enumi}0/}
 \begin{enumerate}
     \setlength\itemsep{-1em}
-    \item Workflows verwalten
-    \item Workflows entwerfen %als Graph
-    \item Workflows ausführen
-    \item Ergebnisse anzeigen
+    \item Historie ausgeführter \gls{Workflow}en verwalten
+    \item \glspl{Workflow Schablone} verwalten
+    \item Parametrierung von \glspl{Workflow Schablone}
+    \item \glspl{Workflow Schablone} entwerfen %als Graph
+    \item \glspl{Workflow} ausführen
+    \item \gls{Workflow}-Ergebnisse anzeigen
     %\item Konfiguration der Workflowschritte durch Dialog
-    %\item Graphische Nutzeroberfläche als Webanwendung
+    %\item Graphische Nutzeroberfläche als Webanwendung    
+    \item \gls{Workflow}-Ergebnisse exportieren
     \item Qualitätskontrolle
     %\item Fehlschläge berichten
-    %\item Exportieren von Workflows
     %\item Importieren von Workflows
     %\item Details der Ausführung herunterladbar
     %\item Zustand laufender Workflows einsehen
@@ -31,11 +33,11 @@ Folgende Funktionen wären wünschenswert:
     \setlength\itemsep{-1em}
     \item Schutz vor \gls{SQL} \glspl{Injektion}
     \item Sauberes Beenden der Anwendung
-    \item Validierung der Custom-Schritte vor der Ausführung
-    \item Überwachung der Datenqualität
+    \item Validierung der \glspl{benutzerdefinierte Schritte} vor der Ausführung
+    \item Bereitstellung von Tools zur Überwachung der Datenqualität
     \item Ändern von \glspl{Plotskript}n ohne die Simulation erneut ausführen zu müssen
-    \item Graphische Erstellung von Workflows
-    \item Graphisches Bearbeiten von Workflows
+    \item Graphische Erstellung von \glspl{Workflow Schablone}
+    \item Graphisches Bearbeiten von \glspl{Workflow Schablone}
     \item Schnittstelle zu \gls{ABAQUS}
     \item Darstellung und Bearbeitung der Config-Dateien über \gls{Key-Value-Pair}-Liste
 \end{enumerate}
@@ -47,6 +49,6 @@ Folgende Funktionen sind kein Ziel des Projektes:
     \setlength\itemsep{-1em}
     \item Einsatz auf mobilen Endgeräten
     \item Vollständiges Erstellen von Config-Dateien
-    \item Zugriff von Personen außerhalb des Universitätsnetzwerk
+    \item Zugriff von Personen außerhalb des Universitätsnetzwerkes 
 \end{enumerate}
 \renewcommand{\labelenumi}{\arabic{enumi}}
