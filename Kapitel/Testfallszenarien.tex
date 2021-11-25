@@ -4,65 +4,77 @@
 Folgende Testfälle testen die Musskriterien:
 \renewcommand{\labelenumi}{/T\arabic{enumi}0/}
 \begin{enumerate}
-    \item Workflows anzeigen
+    \item \glspl{Workflow} anzeigen
         \\ \textbf{Stand:} Der \Gls{Nutzer} ist angemeldet
         \\ \textbf{Aktion:} Direkt nach der Anmeldung keine Aktion notwendig. Sonst klickt der \Gls{Nutzer} auf \enquote{Workflowübersicht}
-        \\ \textbf{Reaktion:} Die Workflowübersicht wird angezeigt
-    \item Workflow anlegen
+        \\ \textbf{Reaktion:} Die Workflowübersicht mit den \glspl{Workflow} wird angezeigt
+    \item \glspl{Workflow Schablone} anzeigen
+        \\ \textbf{Stand:} Der \Gls{Nutzer} ist angemeldet
+        \\ \textbf{Aktion:} Direkt nach der Anmeldung keine Aktion notwendig. Sonst klickt der \Gls{Nutzer} auf \enquote{Workflowübersicht}
+        \\ \textbf{Reaktion:} Die Workflowübersicht mit den \glspl{Workflow Schablone} wird angezeigt
+    \item \gls{Workflow Schablone} anlegen
         \\ \textbf{Stand:} Geöffnete Workflowübersicht
         \\ \textbf{Aktion:} Der \Gls{Nutzer} klickt auf den \enquote{Neuen Workflow erstellen}-Knopf
         \\ \textbf{Reaktion:} Der \Gls{Nutzer} wird auf die Workflowerstellungsseite weitergeleitet
-    \item Unberechtigt Workflow anlegen
+    \item Unberechtigt \gls{Workflow Schablone} anlegen
         \\ \textbf{Stand:} Geöffnete Workflowübersicht
         \\ \textbf{Aktion:} Ein \Gls{Reviewer} klickt auf den \enquote{Neuen Workflow erstellen}-Knopf
         \\ \textbf{Reaktion:} Eine Nachricht über das Fehlen von Editierrechten wird angezeigt und der \Gls{Reviewer} wird nicht weitergeleitet
-    \item Workflow exportieren
-        \\ \textbf{Stand:} Ausgewählter Workflow wird angezeigt
+    \item \gls{Workflow Schablone} exportieren
+        \\ \textbf{Stand:} Ausgewählter \gls{Workflow Schablone} wird angezeigt
         \\ \textbf{Aktion:} Der \gls{Nutzer} klickt auf den \enquote{Workflow exportieren}-Knopf
         \\ \textbf{Reaktion:} Eine .yml oder .json Datei wird heruntergeladen
-    \item Workflowinformationen einsehen
+    \item \gls{Workflow} exportieren
+        \\ \textbf{Stand:} Ausgewählter \gls{Workflow} wird angezeigt
+        \\ \textbf{Aktion:} Der \gls{Nutzer} klickt auf den \enquote{Workflow exportieren}-Knopf
+        \\ \textbf{Reaktion:} Eine .yml oder .json Datei wird heruntergeladen
+    \item \gls{Workflow}-Informationen einsehen
         \\ \textbf{Stand:} Geöffnete Workflowübersicht
         \\ \textbf{Aktion:} Der \gls{Nutzer} klickt auf den \enquote{Workflow Information}-Knopf
-        \\ \textbf{Reaktion:} Eine Übersicht über die Attribute des Workflows wird angezeigt
-    \item Workflow umbenennen
+        \\ \textbf{Reaktion:} Eine Übersicht über die Attribute der \gls{Workflow} wird angezeigt
+    \item \gls{Workflow Schablone} umbenennen
         \\ \textbf{Stand:} Geöffnete Workflowübersicht
-        \\ \textbf{Aktion:} Der \gls{Nutzer} klickt auf den \enquote{Workflow Information}-Knopf und ändert unter \enquote{Workflow Name} den Namen des Workflows
+        \\ \textbf{Aktion:} Der \gls{Nutzer} klickt auf den \enquote{Namen ändern}-Knopf und gibt unter \enquote{Workflow Name} den neuen Namen des \glspl{Workflow Schablone} ein
         \\ \textbf{Reaktion:} Der Name des Workflows wird geändert
-    \item Workflow importieren
+    \item \gls{Workflow Schablone} importieren
         \\ \textbf{Stand:} Der \gls{Nutzer} ist auf der Workflowerstellungsseite 
         \\ \textbf{Aktion:} Der \gls{Nutzer} lädt eine gültige .yml oder .json Datei hoch 
-        \\ \textbf{Reaktion:} Der Workflow wird zur Liste der Workflows hinzugefügt
-    \item Konfiguration eines Workflows anpassen
+        \\ \textbf{Reaktion:} Der \gls{Workflow Schablone} wird zur Liste der Workflows hinzugefügt
+    \item Konfiguration einer noch nicht gestarteten \gls{Workflow} bearbeiten
         \\ \textbf{Stand:} Der \gls{Nutzer} ist auf der Workflowbearbeitungsseite
         \\ \textbf{Aktion:} Der \gls{Nutzer} wählt eine Config-Datei aus und bearbeitet einen der Parameter im Texteditor
-        \\ \textbf{Reaktion:} Der neue Parameter für den ausgewählten Workflow wird übernommen
-    \item Daten von abgeschlossenem Workflow herunterladen
+        \\ \textbf{Reaktion:} Der neue Parameter für die ausgewählte \gls{Workflow} wird übernommen
+    \item Daten von abgeschlossenen \glspl{Workflow} herunterladen
         \\ \textbf{Stand:} geöffnete Downloadseite
-        \\ \textbf{Akiton:} Daten werden ausgewählt und der \enquote{Download}-Knopf wird gedrückt
+        \\ \textbf{Aktion:} Daten werden ausgewählt und der \enquote{Download}-Knopf wird gedrückt
         \\ \textbf{Reaktion:} Die ausgewählten Daten werden als Archiv Datei heruntergeladen
     \item Anmelden
         \\ \textbf{Stand:} Login-Seite wird angezeigt
         \\ \textbf{Aktion:} Der \gls{Nutzer} trägt seine korrekten Daten ein und bestätigt sie
         \\ \textbf{Reaktion:} Der \gls{Nutzer} wird auf die Startseite gebracht
-    \item Workflow starten
+    \item \gls{Workflow} starten
         \\ \textbf{Stand:} Geöffnete Workflowübersicht 
-        \\ \textbf{Aktion:} \enquote{Starten}-Knopf eines Workflows wird gedrückt
-        \\ \textbf{Reaktion:} Workflow wird gestartet
-    \item Workflow abbrechen
+        \\ \textbf{Aktion:} \enquote{Starten}-Knopf einer \gls{Workflow} wird gedrückt
+        \\ \textbf{Reaktion:} \gls{Workflow} wird gestartet
+    \item \gls{Workflow} abbrechen
         \\ \textbf{Stand:} Geöffnete Workflowübersicht
-        \\ \textbf{Aktion:} \enquote{Stop}-Knopf eines Workflows wird gedrückt
+        \\ \textbf{Aktion:} \enquote{Stop}-Knopf einer \gls{Workflow} wird gedrückt
         \\ \textbf{Reaktion:} Ausführung der \gls{Workflow} wird unterbrochen
-    \item Workflow löschen
+    \item \gls{Workflow Schablone} löschen
         \\ \textbf{Stand:} Geöffnete Workflowübersicht
-        \\ \textbf{Aktion:} \enquote{Löschen}-Knopf eines Workflows wird gedrückt
-        \\ \textbf{Reaktion:} Workflow wird gelöscht und aus der Liste der Workflows gelöscht
-    \item Benachrichtigen bei Fehlschlag eines Workflows
-        \\ \textbf{Stand:} Gestarteter Workflow schlägt auf Grund eines Fehlers fehl
+        \\ \textbf{Aktion:} \enquote{Löschen}-Knopf eines \glspl{Workflow Schablone} wird gedrückt
+        \\ \textbf{Reaktion:} \gls{Workflow Schablone} wird gelöscht und aus der Liste der Workflows gelöscht
+    \item Noch nicht gestartete \gls{Workflow} löschen
+        \\ \textbf{Stand:} Geöffnete Workflowübersicht
+        \\ \textbf{Aktion:} \enquote{Löschen}-Knopf einer \glspl{Workflow} wird gedrückt
+        \\ \textbf{Reaktion:} \gls{Workflow} wird gelöscht und aus der Liste der Workflows gelöscht    
+    \item Benachrichtigen bei Fehlschlag einer \gls{Workflow}
+        \\ \textbf{Stand:} Gestartete \gls{Workflow} schlägt auf Grund eines Fehlers fehl
         \\ \textbf{Aktion:} Keine Aktion vom \gls{Nutzer} notwendig
-        \\ \textbf{Reaktion:} Der \gls{Nutzer}, der den Workflow gestartet hat, bekommt eine Benachrichtigung angezeigt, dass der gestartete Workflow fehlgeschlagen ist
+        \\ \textbf{Reaktion:} Der \gls{Nutzer}, der die \gls{Workflow} gestartet hat, bekommt eine Benachrichtigung angezeigt, dass die gestartete \gls{Workflow} fehlgeschlagen ist
     \item Registrieren
         \\ \textbf{Stand:} Registrierungsseite
-        \\ \textbf{Aktion:} Registrierungsformular wird ausgefüllt
+        \\ \textbf{Aktion:} Registrierungsformular wird ausgefüllt und bestätigt
         \\ \textbf{Reaktion:} Neues Benutzerkonto wird angelegt und man wird auf die Login-Seite weitergeleitet
     \item Passwort zurücksetzen
         \\ \textbf{Stand:} Geöffnete Nutzerverwaltung eines Benutzerkontos
@@ -97,39 +109,57 @@ Folgende Testfälle testen die Musskriterien:
 
 \section{Testszenarien}
 
-\subsection*{Workflow erstellen und ausführen}
+\subsection*{\gls{Workflow Schablone} erstellen}
 \begin{itemize}
     \item Ein \Gls{Nutzer} meldet sich an und bekommt die Startseite angezeigt
     \item Der \Gls{Nutzer} navigiert zur Workflowübersicht und bekommt alle Workflows angezeigt
-    \item Der \gls{Nutzer} klickt auf den \enquote{Neuen Workflow erstellen}-Knopf und bekommt den \enquote{Worflow erstellen}-Dialog angezeigt
+    \item Der \gls{Nutzer} klickt auf den \enquote{Neuen Workflow erstellen}-Knopf und bekommt den \enquote{Workflow erstellen}-Dialog angezeigt
 \end{itemize}
 
-%
-\subsection*{Workflow überprüfen}
+\subsection*{\gls{Workflow} erstellen und ausführen}
 \begin{itemize}
-    \item Ein \Gls{Reviewer} meldet sich an und bekommt die Startseite angezeigt
-    \item Der \Gls{Reviewer} navigiert zur Workflowübersicht und bekommt alle Workflows angezeigt
-    \item Der \Gls{Reviewer} wählt einen laufenden Workflow aus und bekommt den Status des Workflows und ausgewählte Kennwerte angezeigt
-    \item Der \gls{Reviewer} meldet sich ab
-\end{itemize}
-
-\subsection*{Workflow exportieren und importieren}
-\begin{itemize}
-    \item Ein \gls{Nutzer} meldet sich an und bekommt die Startseite angezeigt
-    \item Der \gls{Nutzer} navigiert zur Workflowübersicht und bekommt alle Workflows angezeigt
-    \item Der \gls{Nutzer} wählt eines der Workflows aus und klickt auf den \enquote{Exportieren}-Knopf. Eine .yml oder .json-Datei wird heruntergeladen
-    \item Der \gls{Nutzer} klickt auf den \enquote{Neuen Workflow erstellen}-Knopf und bekommt den \enquote{Worflow erstellen}-Dialog angezeigt
-    \item Der \gls{Nutzer} lädt eine Workflow-Konfiguration hoch und der neue Workflow wird erstellt
+    \item Ein \Gls{Nutzer} meldet sich an und bekommt die Startseite angezeigt
+    \item Der \Gls{Nutzer} navigiert zur Workflowübersicht und bekommt alle \glspl{Workflow Schablone}
+    \item Der \gls{Nutzer} wählt einen \gls{Workflow Schablone} aus
+    \item Der \gls{Nutzer} erstellt aus dem \gls{Workflow Schablone} eine neue \gls{Workflow} 
+    \item Der \gls{Nutzer} befüllt die Parameter der \gls{Workflow}
+    \item Der \gls{Nutzer} startet die \gls{Workflow}
     \item Der \gls{Nutzer} meldet sich ab
 \end{itemize}
 
+%
+\subsection*{\gls{Workflow} überprüfen}
+\begin{itemize}
+    \item Ein \Gls{Reviewer} meldet sich an und bekommt die Startseite angezeigt
+    \item Der \Gls{Reviewer} navigiert zur Workflowübersicht und bekommt alle \glspl{Workflow} angezeigt
+    \item Der \Gls{Reviewer} wählt eine laufende \gls{Workflow} aus und bekommt den Status der \gls{Workflow} und ausgewählte Kennwerte angezeigt
+    \item Der \gls{Reviewer} meldet sich ab
+\end{itemize}
 
-\subsection*{Ergebnisse eines Workflows einsehen}
+\subsection*{\gls{Workflow Schablone} exportieren und importieren}
 \begin{itemize}
     \item Ein \gls{Nutzer} meldet sich an und bekommt die Startseite angezeigt
     \item Der \gls{Nutzer} navigiert zur Workflowübersicht und bekommt alle Workflows angezeigt
-    \item Der \gls{Nutzer} wählt einen abgeschlossenen Workflow aus und bekommt eine Übersicht des ausgewählten Workflows angezeigt
-    \item Der \gls{Nutzer} lädt sich die Ergebnisse des Workflows herunter
+    \item Der \gls{Nutzer} wählt einen der \glspl{Workflow Schablone} aus und klickt auf den \enquote{Exportieren}-Knopf. Eine .yml oder .json-Datei wird heruntergeladen
+    \item Der \gls{Nutzer} klickt auf den \enquote{Neuen Workflow erstellen}-Knopf und bekommt den \enquote{Worflow erstellen}-Dialog angezeigt
+    \item Der \gls{Nutzer} lädt eine .yml oder .json-Datei, die einen \gls{Workflow Schablone} beschreibt, hoch und der neue \gls{Workflow Schablone} wird erstellt
+    \item Der \gls{Nutzer} meldet sich ab
+\end{itemize}
+
+\subsection*{\gls{Workflow} exportieren}
+\begin{itemize}
+    \item Ein \gls{Nutzer} meldet sich an und bekommt die Startseite angezeigt
+    \item Der \gls{Nutzer} navigiert zur Workflowübersicht und bekommt alle Workflows angezeigt
+    \item Der \gls{Nutzer} wählt eine der \glspl{Workflow} aus und klickt auf den \enquote{Exportieren}-Knopf. Eine .yml oder .json-Datei wird heruntergeladen und die für die \gls{Workflow} verwendeten Parameter sowie die erzeugten Log-Dateien
+    \item Der \gls{Nutzer} meldet sich ab
+\end{itemize}
+
+\subsection*{Ergebnisse einer \gls{Workflow} einsehen}
+\begin{itemize}
+    \item Ein \gls{Nutzer} meldet sich an und bekommt die Startseite angezeigt
+    \item Der \gls{Nutzer} navigiert zur Workflowübersicht und bekommt alle Workflows angezeigt
+    \item Der \gls{Nutzer} wählt eine abgeschlossene \gls{Workflow} aus und bekommt eine Übersicht der ausgewählten \gls{Workflow} angezeigt
+    \item Der \gls{Nutzer} lädt sich die Ergebnisse der \gls{Workflow} herunter
     \item Der \gls{Nutzer} meldet sich ab
 \end{itemize}
 
