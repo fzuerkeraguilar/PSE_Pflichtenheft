@@ -1,0 +1,29 @@
+\chapter{Änderungshistorie}
+
+\subsection{Begründung T60}\label{begT60}
+Da das Code-Editor-Plugin für Airflow verwendet wird, haben wir uns dafür entschieden das Exportieren einer Workflow-Instanz in das Exporiteren der Ergebnisse / Metadaten und der DAG-definition file aufzuteilen.
+
+
+\subsection{Begründung T40}\label{begT40}
+Da der Code Editor sich in einem Tab befindet auf den nur berechtigte Zugriff haben fällt dieser Testfall weg.
+
+\subsection{Begründung T160}\label{begT160}
+Da Workflow-Instanzen erst entstehen, wenn ein Workflow ausgeführt wird, existieren keine nichtgestarteten Workflow-Instanzen. Also ist T160 weder möglich noch sinnvoll. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Begründung T100}\label{begT100}
+Da das Ändern einer Konfigurationsdatei zu einer noch nicht gestarteten Workflow-Instanz nicht in der Workflow Ansicht stattfindet sondern im CodeEditor Plugin ändert sich der Testfall. 
+
+\subsection{Begründung T110}\label{begT110}
+Da die Ansicht der Ergebnisse und der Metadaten getrennt ist wurde der Download der Daten ebenfalls aufgeteilt.

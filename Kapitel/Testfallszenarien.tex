@@ -16,18 +16,20 @@ Folgende Testfälle testen die Musskriterien:
         \\ \textbf{Stand:} Geöffnete Workflowübersicht
         \\ \textbf{Aktion:} Der \Gls{Nutzer} klickt auf den \enquote{Neuen Workflow erstellen}-Knopf
         \\ \textbf{Reaktion:} Der \Gls{Nutzer} wird auf die Workflowerstellungsseite weitergeleitet
+        \textcolor{red} {
     \item Unberechtigt \gls{Workflow Schablone} anlegen
         \\ \textbf{Stand:} Geöffnete Workflowübersicht
         \\ \textbf{Aktion:} Ein \Gls{Reviewer} klickt auf den \enquote{Neuen Workflow erstellen}-Knopf
-        \\ \textbf{Reaktion:} Eine Nachricht über das Fehlen von Editierrechten wird angezeigt und der \Gls{Reviewer} wird nicht weitergeleitet
+        \\ \textbf{Reaktion:} Eine Nachricht über das Fehlen von Editierrechten wird angezeigt und der \Gls{Reviewer} wird nicht weitergeleitet (siehe \ref{begT40})
+        }
     \item \gls{Workflow Schablone} exportieren
         \\ \textbf{Stand:} Ausgewählter \gls{Workflow Schablone} wird angezeigt
         \\ \textbf{Aktion:} Der \gls{Nutzer} klickt auf den \enquote{Workflow exportieren}-Knopf
         \\ \textbf{Reaktion:} Eine .yml oder .json Datei wird heruntergeladen
     \item \gls{Workflow} exportieren
         \\ \textbf{Stand:} Ausgewählter \gls{Workflow} wird angezeigt
-        \\ \textbf{Aktion:} Der \gls{Nutzer} klickt auf den \enquote{Workflow exportieren}-Knopf
-        \\ \textbf{Reaktion:} Eine .yml oder .json Datei wird heruntergeladen
+        \\ \textbf{Aktion:} Der \gls{Nutzer} \textcolor{red}{klickt auf den \enquote{Workflow exportieren}-Knopf} \textcolor{blue}{klickt auf den \enquote{Save As}-Knopf. Danach navigiert er zum Result Explorer und exportiert die Ergebnisse der Instanz. (siehe \ref{begT60})}
+        \\ \textbf{Reaktion:} Eine \textcolor{red}{.yml oder .json} \textcolor{blue}{DAG-Definition-Datei und eine zip-}Datei \textcolor{red}{wird} \textcolor{blue}{werden} heruntergeladen
     \item \gls{Workflow}-Informationen einsehen
         \\ \textbf{Stand:} Geöffnete Workflowübersicht
         \\ \textbf{Aktion:} Der \gls{Nutzer} klickt auf den \enquote{Workflow Information}-Knopf
@@ -40,14 +42,20 @@ Folgende Testfälle testen die Musskriterien:
         \\ \textbf{Stand:} Der \gls{Nutzer} ist auf der Workflowerstellungsseite 
         \\ \textbf{Aktion:} Der \gls{Nutzer} lädt eine gültige .yml oder .json Datei hoch 
         \\ \textbf{Reaktion:} Der \gls{Workflow Schablone} wird zur Liste der Workflows hinzugefügt
-    \item Konfiguration einer noch nicht gestarteten \gls{Workflow} bearbeiten
-        \\ \textbf{Stand:} Der \gls{Nutzer} ist auf der Workflowbearbeitungsseite
+    \item \textcolor{red}{Konfiguration einer noch nicht gestarteten \gls{Workflow}} \textcolor{blue}{Konfigurtationsdatei} bearbeiten (siehe \ref{begT100}) 
+        \\ \textbf{Stand:} Der \gls{Nutzer} ist auf der\textcolor{red}{Workflowbearbeitungsseite} \textcolor{blue}{Übersicht aller Konfigurationsdateien} 
         \\ \textbf{Aktion:} Der \gls{Nutzer} wählt eine Konfigurationsdatei aus und bearbeitet einen der Parameter im Texteditor
-        \\ \textbf{Reaktion:} Der neue Parameter für die ausgewählte \gls{Workflow} wird übernommen
+        \\ \textbf{Reaktion:} \textcolor{red}{Der neue Parameter für die ausgewählte \gls{Workflow} wird übernommen} \textcolor{blue}{Die Geänderte Konfig datei wird unter neuem namen abgespeichert und kann in der Parameterauswahl ausgewählt werden}
     \item Daten von abgeschlossenen \glspl{Workflow} herunterladen
+        \textcolor{red}{
         \\ \textbf{Stand:} geöffnete Downloadseite
         \\ \textbf{Aktion:} Daten werden ausgewählt und der \enquote{Download}-Knopf wird gedrückt
-        \\ \textbf{Reaktion:} Die ausgewählten Daten werden als Archiv Datei heruntergeladen
+        \\ \textbf{Reaktion:} Die ausgewählten Daten werden als Archiv Datei heruntergeladen}
+        \textcolor{blue}{
+        \\ \textbf{Stand:} geöffnete Workflowübersichtsseite
+        \\ \textbf{Aktion:} der \enquote{Download}-Knopf wird gedrückt. Es wird zur Metadatenansicht navigiert. Der \enquote{Download}-Knopf wird gedrückt.
+        \\ \textbf{Reaktion:} Die Workflowergebnisse werden als Archivdatei heruntergeladen. Die Metadaten werden als .json Datei heruntergeladen. (siehe \ref{begT110})
+        }
     \item Anmelden
         \\ \textbf{Stand:} Login-Seite wird angezeigt
         \\ \textbf{Aktion:} Der \gls{Nutzer} trägt seine korrekten Daten ein und bestätigt sie
@@ -64,10 +72,12 @@ Folgende Testfälle testen die Musskriterien:
         \\ \textbf{Stand:} Geöffnete Workflowübersicht
         \\ \textbf{Aktion:} \enquote{Löschen}-Knopf eines \glspl{Workflow Schablone} wird gedrückt
         \\ \textbf{Reaktion:} \gls{Workflow Schablone} wird gelöscht und aus der Liste der Workflows gelöscht
-    \item Noch nicht gestartete \gls{Workflow} löschen
+    \textcolor{red}{
+    \item Noch nicht gestartete \gls{Workflow} löschen (siehe \ref{begT160})
         \\ \textbf{Stand:} Geöffnete Workflowübersicht
         \\ \textbf{Aktion:} \enquote{Löschen}-Knopf einer \glspl{Workflow} wird gedrückt
-        \\ \textbf{Reaktion:} \gls{Workflow} wird gelöscht und aus der Liste der Workflows gelöscht    
+        \\ \textbf{Reaktion:} \gls{Workflow} wird gelöscht und aus der Liste der Workflows gelöscht 
+        }
     \item Benachrichtigen bei Fehlschlag einer \gls{Workflow}
         \\ \textbf{Stand:} Gestartete \gls{Workflow} schlägt auf Grund eines Fehlers fehl
         \\ \textbf{Aktion:} Keine Aktion vom \gls{Nutzer} notwendig
